@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div img {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slider">
+        <img class="slider-img" src="../Slider/ImagesSlider/img (1).jpeg" alt="">
+        <img class="slider-img" src="../Slider/ImagesSlider/img (2).jpeg" alt="">
+        <img class="slider-img" src="../Slider/ImagesSlider/img (3).jpeg" alt="">
+        <img class="slider-img" src="../Slider/ImagesSlider/img (4).jpeg" alt="">
+        <img class="slider-img" src="../Slider/ImagesSlider/img (5).jpeg" alt="">
+    </div>
+
+    <script>
+        let SliderImagesData = document.getElementsByClassName('slider-img');
+        let count = 0;
+        function Slider() {
+            // console.log(SliderImagesData);
+            // console.log("called slider function");
+            // console.log(SliderImagesData);
+            for (let index = 0; index < SliderImagesData.length; index++) {
+                // console.log(SliderImagesData[index]);
+                SliderImagesData[index].style.display = 'none'
+                SliderImagesData[index].classList.remove('sldier-effect');
+            }
+            if (count >= SliderImagesData.length) {
+                // console.log("Called");
+                count =0;
+            }
+            // console.log(count);
+            SliderImagesData[count].style.display = 'block';
+            SliderImagesData[count].classList.add('sldier-effect');
+            count++;
+            // setInterval(Slider, 3000);
+            setTimeout(Slider, 3000);
+            console.log(count);
+
+        }
+
+        Slider()
+    </script>
+</body>
+
+</html>

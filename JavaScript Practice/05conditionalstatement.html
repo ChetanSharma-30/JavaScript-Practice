@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        data = 50;
+        // data =data+150;
+        data += 150;
+        var Marks = prompt("Enter ur marks")
+        if (Marks > 0 && Marks <= 100) {
+            if (Marks > 50) {
+                if (Marks > 50 && Marks <= 60) {
+                    console.log("pass class");
+                } else if (Marks > 60 && Marks <= 70) {
+                    console.log("first class");
+                    
+                }else if (Marks > 70 && Marks <= 80) {
+                    console.log("Dist class");
+                    
+                }else if (Marks > 80 && Marks <= 90) {
+                    console.log("Dist+");
+                }else{
+                    console.log("TOPPER");
+                    
+                }
+                console.log("pass");
+            } else {
+                console.log("try again");
+            }
+            // console.log("valid");
+        } else {
+            console.log("invalid");
+        }
+        Days = "M"
+        switch (Days) {
+            case "M":
+                console.log("Monday");
+                break;
+        
+            default:
+                break;
+        }
+    </script>
+</body>
+
+</html>
