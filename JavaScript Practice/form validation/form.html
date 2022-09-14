@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="name1" id="name1" onblur="check(this, 'first1', 'NAME')">
+        <span id="first1"></span>
+        <br><br>
+        <input type="text" name="name2" id="name2" onblur="check(this, 'first2', 'MOBILE')">
+        <span id="first2"></span>
+        <br><br>
+        <input type="text" name="name2" id="name2" onblur="check(this, 'first3', '')" >
+        <span id="first3"></span>
+        <br><br>
+        <input type="text" name="name2" id="name2" onblur="check(this, 'first4')" >
+        <span id="first4"></span>
+
+    </form>
+</body>
+</html>
+
+<script>
+    function check(a,spnid,msg) {
+        if (a.value == "")
+        {
+            document.getElementById(spnid).innerHTML = "Type here"+msg
+        }
+        else {
+            document.getElementById(spnid).innerHTML = ""
+
+        }
+    }
+</script>
